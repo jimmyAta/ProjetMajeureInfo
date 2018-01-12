@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+<head>
+   
+    <title>Building</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    </head>
+<body>
+<nav class="navbar navbar-inverse">
+ <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#"></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Building</a></li>
+      <li><a href="PageRoom.html">Room</a></li>
+      <li><a href="#">Switch Light</a></li>
+      <li><a href="#">Switch Ringer</a></li>
+    </ul>
+  </div>
+</nav>
+
+   
+
+<div class="container" id="appbuilding">
+    <h2><br /><br /><br />List of Buildings <br /><br /><br /></h2>
+
+    
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">N0</th>
+            <th scope="col">Name</th>
+            <th scope="col">Number of rooms</th>
+            <th scope="col">Detail</th>
+            
+        </tr>
+        </thead>
+        <tbody>
+        <form action=""></form>
+
+        
+        <tr v-for="building in buildings">
+            <th scope="row">{{ building.buildingId }}</th>
+            <td>{{ building.nom }}</td>
+
+
+            
+            <td>{{ building.rooms.length }} </td>
+
+            <td><button v-on:click="goToDetails" class="btn btn-light"><img src="img/details.png" width="30" /></button></td>
+            </td>
+            
+        </tr>
+        </form>
+        </tbody>
+    </table>
+
+
+<br>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+        crossorigin="anonymous"></script>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="js/appbuilding.js"></script>
+
+</body>
+</html>
